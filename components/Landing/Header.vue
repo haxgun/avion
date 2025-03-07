@@ -6,7 +6,9 @@
       <NuxtImg src="/logo.svg" width="100" height="31,45" alt="logo" />
     </div>
     <div class="flex items-center gap-4">
-      <UiButton variant="ghost" size="sm">Login</UiButton>
+      <UiButton variant="ghost" size="sm">
+        <NuxtLink to="/login">Login</NuxtLink>
+      </UiButton>
       <UiButton variant="blue" size="sm">Start free</UiButton>
     </div>
   </header>
