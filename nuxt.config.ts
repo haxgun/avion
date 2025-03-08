@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/fonts",
     "@nuxt/image",
+    "@vee-validate/nuxt",
+    "@morev/vue-transitions/nuxt",
   ],
 
   tailwindcss: {
@@ -20,6 +22,10 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: "",
+  },
+
+  veeValidate: {
+    autoImports: true,
   },
 
   imports: {
@@ -33,7 +39,17 @@ export default defineNuxtConfig({
         name: "VariantProps",
         type: true,
       },
+      {
+        from: "vue-sonner",
+        name: "toast",
+        as: "useSonner",
+      },
     ],
   },
+
   ssr: true,
+
+  build: {
+    transpile: ["vue-sonner"],
+  },
 });

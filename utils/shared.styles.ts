@@ -6,6 +6,7 @@ export const buttonStyles = tv({
       default:
         "bg-[#f9fafb] text-[#27272b] shadow-[0rem_0.25rem_0.75rem_rgba(12,20,66,0.02),0rem_1.875rem_5rem_rgba(12,20,66,0.08)] ring-1 ring-[#e0e2e4] transition-all hover:bg-white active:ring",
       blue: "bg-[#008fff]/10 text-[#008fff] shadow-[0rem_0.25rem_0.75rem_rgba(12,20,66,0.02),0rem_1.875rem_5rem_rgba(12,20,66,0.08)] ring-1 ring-[#008ffd]/80 transition-all hover:bg-blue-400/20 active:ring",
+      gray: "cursor-pointer bg-[#27272B] p-4 text-sm font-medium text-white transition-all hover:bg-[#3c3e42] focus:ring focus:ring-[rgba(39,39,43,0.72)] active:scale-95",
       destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
       icon: "cursor-pointer rounded-xl bg-[#eceff2] shadow-[0rem_0.125rem_0.25rem_rgba(12,20,66,0.02),0rem_-0.0625rem_0.125rem_rgba(12,20,66,0.03)] ring-0 hover:bg-[#e9ecef]",
       outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
@@ -29,6 +30,7 @@ export const buttonStyles = tv({
     size: {
       xs: "h-8 px-2",
       sm: "h-9 px-3",
+      none: "",
       default: "h-10 px-4 py-2",
       lg: "h-11 px-8",
       "icon-xs": "h-8 w-8",
