@@ -6,7 +6,6 @@
 
   const props = withDefaults(defineProps<Props>(), {
     size: 24,
-    color: "#F2F2F2",
   });
 </script>
 

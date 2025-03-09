@@ -3,6 +3,11 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 /**@type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
+  variants: {
+    extend: {
+      fill: ['hover', 'focus'],
+    }
+  },
   theme: {
     extend: {
       container: {

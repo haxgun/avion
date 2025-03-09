@@ -38,11 +38,12 @@
             v-memo="social"
             size="icon"
             variant="icon"
-            v-for="social in FooterSocialData"
+            v-for="social in footerSocials"
             :key="social.title"
             @click="openLink(social.link)"
+            class="social-button"
           >
-            <component :is="social.icon" :size="16" color="#000" />
+            <component :is="social.icon" :size="16" :style="{ '--social-hover-color': social.color }"/>
           </UiButton>
         </div>
       </div>
@@ -64,3 +65,14 @@
     </div>
   </footer>
 </template>
+
+<style>
+  .social-button svg {
+    fill: #27272b;
+    transition: fill .2s;
+  }
+
+  .social-button:hover svg {
+    fill: var(--social-hover-color);
+  }
+</style>

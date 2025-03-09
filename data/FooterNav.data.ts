@@ -17,6 +17,7 @@ interface FooterSocialData {
   title: string;
   icon: any;
   link: string;
+  color: string;
 }
 
 export const FooterNavData: FooterNav[] = [
@@ -93,25 +94,30 @@ export const FooterSocialData: FooterSocialData[] = [
     title: "X",
     icon: IconsX,
     link: "https://www.x.com",
+    color: "#000"
   },
   {
     title: "Instagram",
     icon: IconsInstagram,
     link: "https://www.instagram.com",
+    color: "#DD2A7B"
   },
   {
     title: "Github",
     icon: IconsGithub,
     link: "https://www.github.com",
+    color: "#211F1F"
   },
   {
     title: "Discord",
     icon: IconsDiscord,
     link: "https://discord.com",
+    color: "#738ADB"
   },
   {
     title: "VK",
     icon: IconsVK,
     link: "https://vk.com",
+    color: "#5181B8"
   },
 ];
