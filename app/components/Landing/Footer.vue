@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { FooterData, FooterNavData, FooterSocialData } from "@/data/FooterNav.data";
-  import { openLink } from "~/utils";
+  import { openLink } from "@/utils";
 
   const footerNavData = FooterNavData;
   const footerData = FooterData;
@@ -43,7 +43,11 @@
             @click="openLink(social.link)"
             class="social-button"
           >
-            <component :is="social.icon" :size="16" :style="{ '--social-hover-color': social.color }"/>
+            <component
+              :is="social.icon"
+              :size="16"
+              :style="{ '--social-hover-color': social.color }"
+            />
           </UiButton>
         </div>
       </div>
@@ -69,7 +73,7 @@
 <style>
   .social-button svg {
     fill: #27272b;
-    transition: fill .2s;
+    transition: fill 0.2s;
   }
 
   .social-button:hover svg {

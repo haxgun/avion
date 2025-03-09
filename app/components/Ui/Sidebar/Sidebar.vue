@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import SidebarContent from "@/components/Ui/Sidebar/SidebarContent.vue";
+  import SidebarContentButton from "@/components/Ui/Sidebar/SidebarContentButton.vue";
   import SidebarHeader from "@/components/Ui/Sidebar/SidebarHeader.vue";
-  import SidebarContentButton from "~/components/Ui/Sidebar/SidebarContentButton.vue";
-  import { SidebarData } from "~/data/App/Sidebar.data";
+  import { SidebarData } from "@/data/App/Sidebar.data";
 </script>
 
 <template>

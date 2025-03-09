@@ -2,11 +2,12 @@ const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /**@type {import('tailwindcss').Config} */
 module.exports = {
+  content: ["./app/**/*.{js,jsx,ts,tsx,vue}"],
   darkMode: "class",
   variants: {
     extend: {
-      fill: ['hover', 'focus'],
-    }
+      fill: ["hover", "focus"],
+    },
   },
   theme: {
     extend: {
