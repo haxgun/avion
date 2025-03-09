@@ -4,17 +4,24 @@
   import { z } from "zod";
 
   useSeoMeta({
-    title: "Авторизация",
-    description: "Введите слой email и пароля для авторизации.",
+    title: "Регистрация",
+    description: "Введите данные для регистрации",
   });
 
   const schema = z.object({
+    username: z
+      .string({ required_error: "Заполните поле" })
+      .min(3, "Псевдоним должен содержать минимум 3 символа"),
     email: z
       .string({ required_error: "Заполните поле" })
       .email("Введите действительный адрес электронной почты"),
     password: z
       .string({ required_error: "Заполните поле" })
-      .min(8, "Пароль должен содержать минимум 8 символов"),
+      .min(8, "Пароль должен содержать минимум 8 символов")
+      .regex(/[A-Z]/, "Пароль должен содержать хотя бы одну заглавную букву")
+      .regex(/[a-z]/, "Пароль должен содержать хотя бы одну строчную букву")
+      .regex(/[0-9]/, "Пароль должен содержать хотя бы одну цифру")
+      .regex(/[@$!%*?&#]/, "Пароль должен содержать хотя бы один специальный символ"),
   });
 
   const { handleSubmit, isSubmitting } = useForm({
@@ -41,11 +48,17 @@
       class="m-auto grid max-w-md gap-5 rounded-3xl bg-white p-12 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]"
     >
       <div class="flex flex-col gap-2">
-        <h1 class="text-xl font-medium">Авторизация</h1>
-        <p class="text-sm text-[rgb(97,104,112)]">Войдите, если у Вас уже есть учетная запись.</p>
+        <h1 class="text-xl font-medium">Регистрация</h1>
+        <p class="text-sm text-[rgb(97,104,112)]">Создайте аккаунт и начните пользоваться avion.</p>
       </div>
       <form @submit.prevent="onSubmit">
         <fieldset :disabled="isSubmitting" class="grid gap-3">
+          <UiVeeInput
+            type="text"
+            name="username"
+            placeholder="Псевдоним"
+            :disabled="isSubmitting"
+          />
           <UiVeeInput type="email" name="email" placeholder="Email" :disabled="isSubmitting" />
           <UiVeeInput
             type="password"
@@ -59,17 +72,14 @@
             class="mt-3 w-full"
             type="submit"
             :loading="isSubmitting"
-            >Авторизоваться</UiButton
+            >Зарегистрироваться</UiButton
           >
         </fieldset>
       </form>
       <div class="flex flex-col gap-2 text-sm">
-        <NuxtLink to="/reset" class="text-lightblue hover:text-darkblue">Забыли пароль?</NuxtLink>
         <span>
-          Вы не имеете аккаунта?
-          <NuxtLink to="/registration" class="text-lightblue hover:text-darkblue">
-            Зарегистрируйтесь
-          </NuxtLink>
+          Уже есть аккаунт?
+          <NuxtLink to="/login" class="text-lightblue hover:text-darkblue"> Войти </NuxtLink>
         </span>
       </div>
     </div>
