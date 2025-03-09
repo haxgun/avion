@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <ClientOnly>
     <NuxtLayout>
       <NuxtPage />
       <UiVueSonner />
     </NuxtLayout>
-  </div>
+  </ClientOnly>
 </template>
