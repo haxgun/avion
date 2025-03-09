@@ -4,7 +4,6 @@
     :visible-toasts="5"
     rich-colors
     :duration="7000"
-    close-button
     :theme="$colorMode.value == 'dark' ? 'dark' : 'light'"
   />
 </template>
