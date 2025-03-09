@@ -15,7 +15,7 @@
   <footer class="container mt-28 flex flex-col gap-10">
     <div class="flex w-full flex-row justify-between">
       <div class="flex max-w-[18rem] flex-col gap-4">
-        <NuxtImg src="/logo.svg" width="118" height="38" />
+        <NuxtImg src="/logo.svg" width="118" height="38" fetchpriority="high" />
         <span class="text-base font-medium">{{ $t("landing.footer.description") }}</span>
         <LazyUiLanguageSwitcher />
       </div>

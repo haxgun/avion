@@ -80,7 +80,7 @@
         </span>
       </div>
       <div class="absolute -top-16 flex w-full items-center justify-center">
-        <NuxtImg src="/logo.svg" width="118" height="38" />
+        <NuxtImg src="/logo.svg" width="118" height="38" fetchpriority="high" />
       </div>
     </div>
   </div>
