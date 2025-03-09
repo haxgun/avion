@@ -7,9 +7,11 @@
     </div>
     <div class="flex items-center gap-4">
       <UiButton variant="ghost" size="sm">
-        <NuxtLink to="/login">Login</NuxtLink>
+        <NuxtLink to="/login">{{ $t("landing.header.buttons.login") }}</NuxtLink>
       </UiButton>
-      <UiButton variant="blue" size="sm">Start free</UiButton>
+      <UiButton variant="blue" size="sm">
+        <NuxtLink to="/registration">{{ $t("landing.header.buttons.signup") }}</NuxtLink></UiButton
+      >
     </div>
   </header>
 </template>

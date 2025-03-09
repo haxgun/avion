@@ -13,11 +13,30 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@vee-validate/nuxt",
     "@morev/vue-transitions/nuxt",
+    "@nuxtjs/i18n",
   ],
 
   tailwindcss: {
     exposeConfig: true,
     editorSupport: true,
+  },
+
+  i18n: {
+    skipSettingLocaleOnNavigate: true,
+    strategy: "no_prefix",
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "lang",
+      redirectOn: "root",
+      fallbackLocale: "en_US",
+    },
+    locales: [
+      { code: "en_US", name: "English", file: "en_US.json" },
+      { code: "ru_RU", name: "Русский (Russian)", file: "ru_RU.json" },
+    ],
+    langDir: "locales",
+    defaultLocale: "en_US",
+    lazy: true,
   },
 
   colorMode: {

@@ -14,10 +14,10 @@
     :class="[full_width ? 'col-span-2' : '']"
   >
     <div class="absolute bottom-14 left-14 right-14 z-10 grid max-w-[60%] gap-4">
-      <span class="text-sm font-medium text-[--category_color]">{{ category }} </span>
-      <h1 class="text-2xl font-bold">{{ title }}</h1>
+      <span class="text-sm font-medium text-[--category_color]">{{ $t(category) }} </span>
+      <h1 class="text-2xl font-bold">{{ $t(title) }}</h1>
       <p class="whitespace-pre-line text-base text-[#737373]">
-        {{ description }}
+        {{ $t(description) }}
       </p>
     </div>
   </div>

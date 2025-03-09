@@ -21,52 +21,52 @@ interface FooterSocialData {
 
 export const FooterNavData: FooterNav[] = [
   {
-    title: "Avion",
+    title: "landing.footer.nav.first.title",
     items: [
       {
-        title: "About Us",
+        title: "landing.footer.nav.first.items.first",
         link: "/about",
       },
       {
-        title: "Contact Us",
+        title: "landing.footer.nav.first.items.second",
         link: "/contact",
       },
     ],
   },
   {
-    title: "Resourses",
+    title: "landing.footer.nav.second.title",
     items: [
       {
-        title: "Download app",
+        title: "landing.footer.nav.second.items.first",
         link: "/download",
       },
       {
-        title: "Support",
+        title: "landing.footer.nav.second.items.second",
         link: "/support",
       },
       {
-        title: "Productivity",
+        title: "landing.footer.nav.second.items.third",
         link: "/productivity",
       },
       {
-        title: "Techniques",
+        title: "landing.footer.nav.second.items.fourth",
         link: "/techniques",
       },
       {
-        title: "Status",
+        title: "landing.footer.nav.second.items.fifth",
         link: "/status",
       },
     ],
   },
   {
-    title: "Possibilities",
+    title: "landing.footer.nav.third.title",
     items: [
       {
-        title: "How it work",
+        title: "landing.footer.nav.third.items.first",
         link: "/how",
       },
       {
-        title: "For team",
+        title: "landing.footer.nav.third.items.second",
         link: "/team",
       },
     ],
@@ -75,15 +75,15 @@ export const FooterNavData: FooterNav[] = [
 
 export const FooterData: FooterData[] = [
   {
-    title: "Security",
+    title: "landing.footer.under.nav.security",
     link: "/security",
   },
   {
-    title: "Privacy",
+    title: "landing.footer.under.nav.privacy",
     link: "/privacy",
   },
   {
-    title: "Conditions",
+    title: "landing.footer.under.nav.conditions",
     link: "/conditions",
   },
 ];

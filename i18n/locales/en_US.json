@@ -1,0 +1,111 @@
+{
+  "landing": {
+    "header": {
+      "buttons": {
+        "login": "Login",
+        "signup": "Start free"
+      }
+    },
+    "hero": {
+      "popup": "Some new features!",
+      "title": {
+        "first": "Organize your day, ",
+        "smart": "\nthe smart",
+        "second": " way!"
+      },
+      "description": "Avion is a simple but effective to-do list app aimed at\nmodern design and ease of use.",
+      "buttons":{
+        "watch": "Watch video",
+        "start": "Get started"
+      }
+    },
+    "features": {
+      "first": {
+        "category": "Capture Ideas Swiftly",
+        "title": "Turn Ideas into Reality with a Single Touch",
+        "description": "Never miss important moments! With Avion, you can effortlessly\n add tasks and to-dos in an instant. \nWhether it's a note, a deadline, or crucial milestones, we'll help you input\neverything into your task list."
+      },
+      "second": {
+        "category": "Prioritize with Precision",
+        "title": "Your World, Your Order",
+        "description": "Organize your tasks as you prefer. \nAvion enables you to create categories. \nSort tasks by date, priority, or category to always stay in the loop about what matters today."
+      },
+      "third": {
+        "category": "Style Your Workspace",
+        "title": "Design Reflects Your Style",
+        "description": "Your workspace, your style. Avion offers you a range of themes to choose from, ensuring your eyes always delight in the convenience and beauty of the interface."
+      },
+      "fourth": {
+        "category": "Details Make Triumphs",
+        "title": "Details: The Key to Success",
+        "description": "Details Make Triumphs\nDetails: The Key to Success\n\nDetails matter! Evaluate tasks by priority, attach notes and files to ensure nothing escapes your attention. Avion allows you to focus on the finer points, enabling you to achieve great results."
+      }
+    },
+    "footer": {
+      "description": "Create your list of dreams and start realizing them today!",
+      "nav": {
+        "first": {
+          "title": "Avion",
+          "items": {
+            "first": "About us",
+            "second": "Contact us"
+          }
+        },
+        "second": {
+          "title": "Resources",
+          "items": {
+            "first": "Download app",
+            "second": "Support",
+            "third": "Productivity",
+            "fourth": "Techniques",
+            "fifth": "Status"
+          }
+        },
+        "third": {
+          "title": "Possibilities",
+          "items": {
+            "first": "How it work",
+            "second": "For team"
+          }
+        }
+      },
+      "under": {
+        "nav": {
+          "security": "Security",
+          "privacy": "Privacy",
+          "conditions": "Conditions"
+        },
+        "made": "Made with ❤\uFE0F in Russia",
+        "copy": "Copyright © 2025 Avion. All rights reserved."
+      }
+    }
+  },
+  "login": {
+    "title": "Log in",
+    "description": "Sign in if you already have an account.",
+    "email": "Email",
+    "password": "Password",
+    "forgot": "Forgot password?",
+    "login": "Sign in",
+    "signup": "Don't have an account? ",
+    "signup_button": "Sign up"
+  },
+  "signup": {
+    "title": "Sign up",
+    "description": "Create an account and start using avion.",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "signup": "Sign up",
+    "login": "Do you have an account? ",
+    "login_button": "Log in"
+  },
+  "reset": {
+    "title": "Request new password",
+    "description": "To reset your password, please enter the email address of your avion account.",
+    "button": "Send password"
+  },
+  "languageSwitcher": {
+    "title": "Language"
+  }
+}

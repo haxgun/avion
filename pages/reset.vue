@@ -35,13 +35,12 @@
 <template>
   <div class="flex h-dvh w-dvw items-center justify-center bg-[#f7f8fa]">
     <div
-      class="m-auto grid max-w-md gap-5 rounded-3xl bg-white p-12 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]"
+      class="relative m-auto grid w-full max-w-sm gap-5 rounded-3xl bg-white p-12 shadow-[0px_1px_2px_0px_rgba(0,0,0,0.05)]"
     >
       <div class="flex flex-col gap-2">
-        <h1 class="text-xl font-medium">Восстановление пароля</h1>
+        <h1 class="text-xl font-medium">{{ $t("reset.title") }}</h1>
         <p class="text-sm text-[rgb(97,104,112)]">
-          Чтобы сбросить свой пароль, пожалуйста, введите адрес электронной почты вашей учетной
-          записи.
+          {{ $t("reset.description") }}
         </p>
       </div>
       <form @submit.prevent="onSubmit">
@@ -53,10 +52,13 @@
             class="mt-3 w-full"
             type="submit"
             :loading="isSubmitting"
-            >Восстановить пароль</UiButton
+            >{{ $t("reset.button") }}</UiButton
           >
         </fieldset>
       </form>
+      <div class="absolute -top-16 flex w-full items-center justify-center">
+        <NuxtImg src="/logo.svg" width="118" height="38" />
+      </div>
     </div>
   </div>
 </template>

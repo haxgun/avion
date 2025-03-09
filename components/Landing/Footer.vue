@@ -16,25 +16,19 @@
     <div class="flex w-full flex-row justify-between">
       <div class="flex max-w-[18rem] flex-col gap-4">
         <NuxtImg src="/logo.svg" width="118" height="38" />
-        <span class="text-base font-medium"
-          >Create your list of dreams and start realizing them today!</span
-        >
+        <span class="text-base font-medium">{{ $t("landing.footer.description") }}</span>
+        <LazyUiLanguageSwitcher />
       </div>
       <div class="flex flex-row gap-9">
-        <div
-          v-memo="nav"
-          v-for="nav in footerNavData"
-          :key="nav.title"
-          class="flex w-40 flex-row gap-9"
-        >
+        <div v-for="nav in footerNavData" :key="nav.title" class="flex w-40 flex-row gap-9">
           <ul class="flex flex-col leading-[2]">
-            <li class="text-base font-medium leading-[2]">{{ nav.title }}</li>
+            <li class="text-base font-medium leading-[2]">{{ $t(nav.title) }}</li>
             <li v-for="item in nav.items" :key="item">
               <NuxtLink
                 :to="item.link"
                 class="text-base font-medium text-[#737373] hover:text-[#4d4d4d]"
               >
-                {{ item.title }}
+                {{ $t(item.title) }}
               </NuxtLink>
             </li>
           </ul>
@@ -61,12 +55,12 @@
           :class="[isNotLast(index) ? `after:ms-[0.5rem] after:content-['·']` : '']"
         >
           <NuxtLink :to="item.link" class="hover:underline">
-            {{ item.title }}
+            {{ $t(item.title) }}
           </NuxtLink>
         </li>
       </ul>
-      <span> Made with ❤️ in Russia </span>
-      <span>Copyright © 2025 <span class="text-[#0084ff]">Avion</span></span>
+      <span>{{ $t("landing.footer.under.made") }} </span>
+      <span>{{ $t("landing.footer.under.copy") }}</span>
     </div>
   </footer>
 </template>
