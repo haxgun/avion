@@ -29,20 +29,15 @@
         :name="name"
         :disabled="disabled"
         v-bind="$attrs"
-        :class="[hasIcon && 'pl-9', hasTrailingIcon && 'pr-9']"
+        :class="[
+          hasIcon && 'pl-9',
+          hasTrailingIcon && 'pr-9',
+          errorMessage && 'ring-2 ring-destructive hover:ring-destructive focus:ring-destructive',
+        ]"
         :placeholder="placeholder"
         @blur="handleBlur"
       />
     </div>
-    <TransitionGroup tag="div">
-      <p v-if="hint && !errorMessage" key="hint" class="mt-1.5 text-sm text-muted-foreground">
-        {{ hint }}
-      </p>
-
-      <p v-if="errorMessage" key="errorMessage" class="mt-1.5 text-sm text-destructive">
-        {{ errorMessage }}
-      </p>
-    </TransitionGroup>
   </div>
 </template>
 
