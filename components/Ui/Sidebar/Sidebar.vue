@@ -1,7 +1,8 @@
 <script setup lang="ts">
   import SidebarContent from "@/components/Ui/Sidebar/SidebarContent.vue";
   import SidebarHeader from "@/components/Ui/Sidebar/SidebarHeader.vue";
-  import { CalendarDate, CheckSquareBroken, HomeSmile } from "untitledui-js/vue";
+  import SidebarContentButton from "~/components/Ui/Sidebar/SidebarContentButton.vue";
+  import { SidebarData } from "~/data/App/Sidebar.data";
 </script>
 
 <template>
@@ -10,39 +11,13 @@
   >
     <SidebarHeader />
     <SidebarContent>
-      <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between rounded-sm bg-transparent px-4 py-2 text-left transition-colors hover:bg-[#F3F6FA]"
-      >
-        <div class="flex h-5 flex-row items-center gap-4">
-          <HomeSmile :size="16" />
-          Home
-        </div>
-        <span class="rounded-sm bg-[#f2f4f7] px-[6px] text-xs font-medium leading-5 text-[#a0a5ab]"
-          >2</span
-        >
-      </div>
-      <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between rounded-sm bg-transparent px-4 py-2 text-left transition-colors hover:bg-[#F3F6FA]"
-      >
-        <div class="flex h-5 flex-row items-center gap-4">
-          <CheckSquareBroken :size="16" />
-          Completed
-        </div>
-        <span class="rounded-sm bg-[#f2f4f7] px-[6px] text-xs font-medium leading-5 text-[#a0a5ab]"
-          >7</span
-        >
-      </div>
-      <div
-        class="flex w-full cursor-pointer flex-row items-center justify-between rounded-sm bg-transparent px-4 py-2 text-left transition-colors hover:bg-[#F3F6FA]"
-      >
-        <div class="flex h-5 flex-row items-center gap-4">
-          <CalendarDate :size="16" />
-          Today
-        </div>
-        <span class="rounded-sm bg-[#f2f4f7] px-[6px] text-xs font-medium leading-5 text-[#a0a5ab]"
-          >0</span
-        >
-      </div>
+      <SidebarContentButton
+        v-for="data in SidebarData"
+        :key="data.label"
+        :icon="data.icon"
+        :count="data.count"
+        :label="data.label"
+      />
     </SidebarContent>
   </div>
 </template>
