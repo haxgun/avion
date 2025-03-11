@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Check } from "untitledui-js/vue";
+  import { Check, ClipboardCheck } from "untitledui-js/vue";
 
   const tasks = reactive([
     { id: 1, title: "Задача 1", completed: false },
@@ -12,8 +12,12 @@
 
 <template>
   <Transition mode="out-in">
-    <div v-if="!hasTasks" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-      <span class="text-black/20">Задачи завершены</span>
+    <div
+      v-if="!hasTasks"
+      class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-3 font-semibold text-black/20"
+    >
+      <ClipboardCheck :size="36" />
+      <span>{{ $t("app.content.noTasks") }}</span>
     </div>
     <div v-else class="flex flex-col gap-2 py-3">
       <div

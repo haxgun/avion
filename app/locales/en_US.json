@@ -164,6 +164,9 @@
         "The best time to plant a tree was 20 years ago.\n The second best time is now."
       ],
       "input": "Create new task"
+    },
+    "content": {
+      "noTasks": "Tasks completed",
     }
   }
 }
