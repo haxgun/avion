@@ -1,13 +1,13 @@
 <script setup lang="ts">
-  import { ref } from "vue";
+  import { Check } from "untitledui-js/vue";
 
-  const tasks = ref([
+  const tasks = reactive([
     { id: 1, title: "Задача 1", completed: false },
     { id: 2, title: "Задача 2", completed: false },
     { id: 3, title: "Задача 3", completed: false },
   ]);
 
-  const hasTasks = computed(() => tasks.value.some((task) => !task.completed));
+  const hasTasks = computed(() => tasks.some((task) => !task.completed));
 </script>
 
 <template>
@@ -17,12 +17,27 @@
     </div>
     <div v-else class="flex flex-col gap-3 py-3">
       <div
-        class="flex h-[44px] w-full items-center gap-2 rounded-[8px] bg-white px-5 py-3 shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] first:rounded-b-[8px] first:rounded-t-[16px] last:rounded-b-[16px] last:rounded-t-[8px]"
         v-for="task in tasks"
         :key="task.id"
+        class="flex w-full items-center rounded-[8px] bg-white shadow-[0_1px_2px_0_rgba(0,0,0,0.05)] first:rounded-b-[8px] first:rounded-t-[16px] last:rounded-b-[16px] last:rounded-t-[8px]"
       >
-        <input type="checkbox" v-model="task.completed" />
-        <span :class="{ 'text-gray-500': task.completed }">{{ task.title }}</span>
+        <div class="flex h-11 w-11 items-center justify-center">
+          <Transition mode="out-in">
+            <div
+              v-if="!task.completed"
+              class="h-5 w-5 rounded-[6px] bg-[#e0e3e6]"
+              @click="task.completed = !task.completed"
+            />
+            <div
+              v-else
+              class="flex h-5 w-5 items-center justify-center rounded-[6px] bg-[#27272B] text-white"
+              @click="task.completed = !task.completed"
+            >
+              <Check :size="14" />
+            </div>
+          </Transition>
+        </div>
+        <span class="text-sm" :class="{ 'line-through': task.completed }">{{ task.title }}</span>
       </div>
     </div>
   </Transition>

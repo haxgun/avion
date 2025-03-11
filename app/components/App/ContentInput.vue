@@ -59,7 +59,7 @@
     </div>
     <div
       class="relative flex h-5 w-full items-start justify-start gap-3 transition-[padding,height]"
-      :class="[inputFocus ? 'pl-5' : 'pl-0']"
+      :class="[inputFocus ? 'pl-6' : 'pl-0']"
     >
       <div v-if="!inputFocus" class="text-sm text-[#C4C7CA]">{{ $t("app.header.input") }}</div>
       <textarea
