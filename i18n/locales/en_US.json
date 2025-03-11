@@ -162,7 +162,8 @@
         "You are one decision away from a totally different life.",
         "The greatest glory in living lies not in never falling,\n but in rising every time we fall.",
         "The best time to plant a tree was 20 years ago.\n The second best time is now."
-      ]
+      ],
+      "input": "Create new task"
     }
   }
 }

@@ -12,5 +12,6 @@
 <template>
   <div>
     <LazyAppContentHeader />
+    <LazyAppContentInput />
   </div>
 </template>
