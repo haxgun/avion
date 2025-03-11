@@ -11,8 +11,8 @@
         <NuxtLoadingIndicator />
         <NuxtLayout>
           <NuxtPage />
-          <UiVueSonner />
         </NuxtLayout>
+        <UiVueSonner />
       </ClientOnly>
     </ConfigProvider>
   </div>

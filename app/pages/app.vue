@@ -10,8 +10,7 @@
 </script>
 
 <template>
-  <div>
-    <LazyAppContentHeader />
-    <LazyAppContentInput />
-  </div>
+  <LazyAppContentHeader />
+  <LazyAppContentInput />
+  <LazyAppContentTasks />
 </template>
