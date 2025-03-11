@@ -43,7 +43,7 @@
 <template>
   <div
     v-on-click-outside="focusInputFalse"
-    class="relative flex w-full cursor-pointer flex-row items-start justify-between gap-3 rounded-lg px-5 py-3 transition-all"
+    class="relative flex w-full cursor-pointer flex-row items-start justify-between gap-3 overflow-hidden rounded-lg px-5 py-3 transition-all"
     :class="[
       inputFocus
         ? 'z-50 bg-white shadow-[0_25px_50px_-12px_rgba(0,0,0,0.2)]'
@@ -75,8 +75,8 @@
     </div>
     <Transition mode="out-in">
       <UiKeyboardKey v-if="!inputFocus" :keys="['Ctrl', 'E']" />
-      <button v-else>
-        <CornerRightDown color="#C4C7CA" :size="16" />
+      <button class="h-5 text-[#C4C7CA]/80 transition-colors hover:text-[#C4C7CA]" v-else>
+        <CornerRightDown :size="16" />
       </button>
     </Transition>
   </div>
