@@ -84,7 +84,7 @@
 
 <template>
   <header class="sticky top-0 z-10 pb-7 pt-12">
-    <div class="flex flex-row justify-between gap-4 font-medium leading-relaxed">
+    <div class="flex flex-row justify-between gap-6 font-medium leading-relaxed">
       <div class="flex flex-col justify-start">
         <span class="text-xl">{{ $t(greeting) }}, {{ username }}</span>
         <span class="whitespace-pre-line text-xl text-neutral-500">{{ currentQuote }}</span>
