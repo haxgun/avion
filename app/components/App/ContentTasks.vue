@@ -15,7 +15,7 @@
     <div v-if="!hasTasks" class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
       <span class="text-black/20">Задачи завершены</span>
     </div>
-    <div v-else class="flex flex-col gap-3 py-3">
+    <div v-else class="flex flex-col gap-2 py-3">
       <div
         v-for="task in tasks"
         :key="task.id"
