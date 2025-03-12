@@ -29,7 +29,11 @@
           <div class="h-3 w-3 rounded-full bg-lightblue"></div>
           <ChevronDown :size="14" color="#27272B" />
         </div>
-        <input type="text" placeholder="Category name" class="bg-transparent font-medium" />
+        <input
+          type="text"
+          placeholder="Category name"
+          class="bg-transparent font-medium outline-none"
+        />
       </div>
       <button><CornerRightDown :size="16" color="#C4C7CA" /></button>
     </div>
