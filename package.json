@@ -11,6 +11,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-vue": "^0.5.8",
     "@morev/vue-transitions": "^3.0.5",
     "@nuxt/fonts": "^0.10.3",
     "@nuxt/icon": "^1.10.3",

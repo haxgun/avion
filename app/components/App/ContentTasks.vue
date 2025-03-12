@@ -1,5 +1,6 @@
 <script setup lang="ts">
-  import { Check, ClipboardCheck } from "untitledui-js/vue";
+  import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+  import { Check } from "untitledui-js/vue";
 
   const tasks = reactive([
     { id: 1, title: "Задача 1", completed: false },
@@ -16,7 +17,11 @@
       v-if="!hasTasks"
       class="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-3 font-semibold text-black/20"
     >
-      <ClipboardCheck :size="36" />
+      <DotLottieVue
+        style="height: 80px; width: 80px; fill: #27272b"
+        autoplay
+        src="/tasks_complete.lottie"
+      />
       <span>{{ $t("app.content.noTasks") }}</span>
     </div>
     <div v-else class="flex flex-col gap-2 py-3">
