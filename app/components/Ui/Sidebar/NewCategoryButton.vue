@@ -7,7 +7,11 @@
 
 <template>
   <Transition mode="out-in">
-    <div v-if="!showCreateCategory" @click="showCreateCategory = true">
+    <div
+      v-if="!showCreateCategory"
+      @click="showCreateCategory = true"
+      class="category-button group"
+    >
       <div
         class="overflow-hidden rounded-sm bg-transparent p-[0.625rem] transition-all group-hover:bg-[#F2F4F7]"
       >
