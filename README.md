@@ -1,8 +1,36 @@
-# Nuxt Minimal Starter
+<p></p>
+<p align="center">
+  <img width="300" src=".github/media/AvionBanner.png#gh-light-mode-only"/>
+  <img width="300" src=".github/media/AvionBannerInverted.png#gh-dark-mode-only"/>
+</p>
+<p align="center">
+  <a href="https://github.com/haxgun/avion/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/haxgun/avion">
+  </a>
+  <a href="https://github.com/haxgun/avion/commits/main">
+    <img src="https://img.shields.io/github/last-commit/haxgun/avion">
+  </a>
+  <a href="https://github.com/haxgun/avion/stargazers">
+    <img src="https://img.shields.io/github/stars/haxgun/avion">
+  </a>
+  <a href="https://github.com/haxgun/avion/network/members">
+    <img src="https://img.shields.io/github/forks/haxgun/avion">
+  </a>
+</p>
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+---
 
-## Setup
+**[avion](https://avion.space/) is a simple, intuitive ToDo manager.** ✨
+
+Our approach is based on the idea of humanity — we make the application friendly and natural. 🌱
+We believe that using the application should be pleasant and easy, like natural communication. 💬
+We want you to feel harmony in every interaction with our application. 🕊️
+
+> **⚠️ IMPORTANT NOTE:** This repository is in the stage of intensive development. 🚧
+
+<br/>
+
+## 🛠️ Setup
 
 Make sure to install dependencies:
 
@@ -20,7 +48,7 @@ yarn install
 bun install
 ```
 
-## Development Server
+## 🚀 Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -38,7 +66,7 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## 📦 Production
 
 Build the application for production:
 
@@ -71,5 +99,3 @@ yarn preview
 # bun
 bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
