@@ -9,8 +9,8 @@
   <Transition mode="out-in">
     <div
       v-if="!showCreateCategory"
-      @click="showCreateCategory = true"
       class="category-button group"
+      @click="showCreateCategory = true"
     >
       <div
         class="overflow-hidden rounded-sm bg-transparent p-[0.625rem] transition-all group-hover:bg-[#F2F4F7]"
@@ -26,12 +26,12 @@
     >
       <div class="flex flex-row items-center gap-2">
         <div class="flex gap-1 rounded-[7px] bg-[#f2f4f7] p-[10px]">
-          <div class="h-3 w-3 rounded-full bg-lightblue"></div>
+          <div class="h-3 w-3 rounded-full bg-lightblue" />
           <ChevronDown :size="14" color="#27272B" />
         </div>
         <input
           type="text"
-          placeholder="Category name"
+          :placeholder="$t('app.sidebar.newList')"
           class="bg-transparent font-medium outline-none"
         />
       </div>

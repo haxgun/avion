@@ -14,7 +14,7 @@
         "second": " way!"
       },
       "description": "Avion is a simple but effective to-do list app aimed at\nmodern design and ease of use.",
-      "buttons":{
+      "buttons": {
         "watch": "Watch video",
         "start": "Get started"
       }
@@ -166,7 +166,14 @@
       "input": "Create new task"
     },
     "content": {
-      "noTasks": "Tasks completed",
+      "noTasks": "Tasks completed"
+    },
+    "sidebar": {
+      "home": "Home",
+      "completed": "Completed",
+      "today": "Today",
+      "create": "Create new list",
+      "newList": "List name"
     }
   }
 }

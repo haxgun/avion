@@ -12,7 +12,7 @@
   >
     <div class="flex h-5 flex-row items-center gap-4">
       <component :is="props.icon" :size="16" />
-      {{ props.label }}
+      {{ $t(props.label) }}
     </div>
     <span
       v-if="props.count > 0"

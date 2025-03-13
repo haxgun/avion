@@ -9,17 +9,17 @@ interface TSidebarData {
 export const SidebarData: TSidebarData[] = [
   {
     icon: HomeSmile,
-    label: "Home",
+    label: "app.sidebar.home",
     count: 1,
   },
   {
     icon: CheckSquareBroken,
-    label: "Completed",
+    label: "app.sidebar.completed",
     count: 7,
   },
   {
     icon: CalendarDate,
-    label: "Today",
+    label: "app.sidebar.today",
     count: 0,
   },
 ];
