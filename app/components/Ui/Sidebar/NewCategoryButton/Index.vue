@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-  import { vOnClickOutside } from "@vueuse/components";
-  import { ChevronDown, CornerRightDown, Plus } from "untitledui-js/vue";
+  import { CornerRightDown, Plus } from "untitledui-js/vue";
 
   const showCreateCategory = ref(false);
 </script>
@@ -19,16 +18,9 @@
       </div>
       <span> Create new task </span>
     </div>
-    <div
-      v-else
-      v-on-click-outside="() => (showCreateCategory = false)"
-      class="category-button justify-between"
-    >
+    <div v-else class="category-button justify-between">
       <div class="flex flex-row items-center gap-2">
-        <div class="flex gap-1 rounded-[7px] bg-[#f2f4f7] p-[10px]">
-          <div class="h-3 w-3 rounded-full bg-lightblue" />
-          <ChevronDown :size="14" color="#27272B" />
-        </div>
+        <UiSidebarNewCategoryButtonColorSelector />
         <input
           type="text"
           :placeholder="$t('app.sidebar.newList')"
