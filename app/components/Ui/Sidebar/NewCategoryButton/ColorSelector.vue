@@ -30,7 +30,7 @@
 
 <template>
   <UiDropdownMenu>
-    <UiDropdownMenuTrigger as-child>
+    <UiDropdownMenuTrigger>
       <button
         class="color-select-trigger relative flex items-center justify-center gap-1 overflow-hidden rounded-[7px] bg-[#f2f4f7] p-[10px] transition-all hover:ring-0 focus:scale-95"
       >
@@ -45,7 +45,7 @@
       @pointer-down-outside="(event) => event.preventDefault()"
       :portal="false"
       align="start"
-      class="z-10 flex max-w-72 flex-col gap-1 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-white/10"
+      class="flex max-w-72 flex-col gap-1 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-white/10"
     >
       <span class="px-[6px] text-sm font-medium">Выберите цвет</span>
       <div class="box-border inline-flex flex-wrap">

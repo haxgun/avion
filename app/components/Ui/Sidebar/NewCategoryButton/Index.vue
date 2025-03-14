@@ -22,7 +22,7 @@
     <div
       v-else
       class="category-button justify-between"
-      v-on-click-outside="() => (showCreateCategory = false)"
+      v-on-click-outside.self="() => (showCreateCategory = false)"
     >
       <div class="flex flex-row items-center gap-2">
         <UiSidebarNewCategoryButtonColorSelector />
