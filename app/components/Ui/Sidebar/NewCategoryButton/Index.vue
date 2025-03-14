@@ -5,6 +5,8 @@
   const keys = useMagicKeys();
   const ctrlD = keys["Ctrl+D"];
 
+  const colorSelectorRef = ref();
+
   const categoryInput = useTemplateRef("categoryInput");
   const showCreateCategory = ref(false);
 
@@ -21,6 +23,12 @@
   watch(ctrlD, (v) => {
     if (v) focusCategoryInput();
   });
+
+  const handleCategoryClickOutside = (event: Event) => {
+    if (!colorSelectorRef.value?.selectMenu) {
+      showCreateCategory.value = false;
+    }
+  };
 </script>
 
 <template>
@@ -41,10 +49,10 @@
     <div
       v-else
       class="category-button justify-between"
-      v-on-click-outside.self="() => (showCreateCategory = false)"
+      v-on-click-outside="handleCategoryClickOutside"
     >
       <div class="flex flex-row items-center gap-2">
-        <UiSidebarNewCategoryButtonColorSelector />
+        <UiSidebarNewCategoryButtonColorSelector ref="colorSelectorRef" />
         <input
           ref="categoryInput"
           type="text"
@@ -69,6 +77,6 @@
   }
 
   .category-button {
-    @apply flex cursor-pointer flex-row items-center gap-2 px-1.5;
+    @apply relative flex cursor-pointer flex-row items-center gap-2 px-1.5;
   }
 </style>
