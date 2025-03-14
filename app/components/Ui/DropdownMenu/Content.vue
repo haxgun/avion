@@ -1,5 +1,5 @@
 <template>
-  <UiDropdownMenuPortal>
+  <UiDropdownMenuPortal :disabled="!props.portal">
     <DropdownMenuContent
       v-bind="{ ...forwarded, ...$attrs }"
       :class="styles({ class: props.class })"
@@ -20,6 +20,7 @@
       DropdownMenuContentProps & {
         /** Custom class(es) to add to the parent */
         class?: any;
+        portal?: boolean;
       }
     >(),
     {

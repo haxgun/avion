@@ -42,12 +42,24 @@
       </button>
     </UiDropdownMenuTrigger>
     <UiDropdownMenuContent
+      @pointer-down-outside="(event) => event.preventDefault()"
+      :portal="false"
       align="start"
-      class="flex max-w-72 flex-col gap-1 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-white/10"
+      class="z-10 flex max-w-72 flex-col gap-1 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-white/10"
     >
       <span class="px-[6px] text-sm font-medium">Выберите цвет</span>
       <div class="box-border inline-flex flex-wrap">
-        <div v-for="color in colors" @click="selectColor = color" :key="color" class="p-[6px]">
+        <div
+          v-for="color in colors"
+          @click="
+            (event) => {
+              event.stopPropagation();
+              selectColor = color;
+            }
+          "
+          :key="color"
+          class="p-[6px]"
+        >
           <div
             :style="{ backgroundColor: color }"
             class="h-[22px] w-[22px] rounded-full border-4 border-white transition-all hover:ring-2 hover:ring-neutral-300"

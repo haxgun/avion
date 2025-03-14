@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import { vOnClickOutside } from "@vueuse/components";
   import { CornerRightDown, Plus } from "untitledui-js/vue";
 
   const showCreateCategory = ref(false);
@@ -18,7 +19,11 @@
       </div>
       <span> {{ $t("app.sidebar.create") }} </span>
     </div>
-    <div v-else class="category-button justify-between">
+    <div
+      v-else
+      class="category-button justify-between"
+      v-on-click-outside="() => (showCreateCategory = false)"
+    >
       <div class="flex flex-row items-center gap-2">
         <UiSidebarNewCategoryButtonColorSelector />
         <input
