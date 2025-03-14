@@ -9,7 +9,7 @@
     <kbd
       v-for="key in keys"
       :key="key"
-      class="pointer-events-none inline-flex h-5 min-h-[16px] shrink-0 select-none items-center justify-center gap-1 rounded-[6px] bg-[#D4D7DA] px-[6px] font-sans text-[10px] font-semibold uppercase text-[#616870]"
+      class="pointer-events-none inline-flex h-5 min-h-[16px] shrink-0 select-none items-center justify-center gap-1 rounded-[6px] bg-[#222426]/5 px-[6px] font-sans text-[10px] font-semibold uppercase text-[#616870]"
     >
       {{ key }}
     </kbd>

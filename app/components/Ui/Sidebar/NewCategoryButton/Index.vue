@@ -2,7 +2,25 @@
   import { vOnClickOutside } from "@vueuse/components";
   import { CornerRightDown, Plus } from "untitledui-js/vue";
 
+  const keys = useMagicKeys();
+  const ctrlD = keys["Ctrl+D"];
+
+  const categoryInput = useTemplateRef("categoryInput");
   const showCreateCategory = ref(false);
+
+  const focusCategoryInput = () => {
+    showCreateCategory.value = true;
+
+    setTimeout(() => {
+      if (categoryInput.value) {
+        categoryInput.value.focus();
+      }
+    }, 100);
+  };
+
+  watch(ctrlD, (v) => {
+    if (v) focusCategoryInput();
+  });
 </script>
 
 <template>
@@ -18,6 +36,7 @@
         <Plus :size="14" color="#27272B" />
       </div>
       <span> {{ $t("app.sidebar.create") }} </span>
+      <UiKeyboardKey :keys="['Ctrl', 'D']" class="ml-auto" />
     </div>
     <div
       v-else
@@ -27,6 +46,7 @@
       <div class="flex flex-row items-center gap-2">
         <UiSidebarNewCategoryButtonColorSelector />
         <input
+          ref="categoryInput"
           type="text"
           :placeholder="$t('app.sidebar.newList')"
           class="bg-transparent font-medium outline-none"
