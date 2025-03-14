@@ -57,7 +57,7 @@
         "
         class="absolute left-0 top-10 flex w-72 flex-col gap-3 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-black/5"
       >
-        <span class="text-sm font-medium">Выберите цвет</span>
+        <span class="text-sm font-medium">{{ $t("colorSelector.title") }}</span>
         <div class="box-border inline-flex flex-wrap gap-3">
           <div
             v-for="color in colors"

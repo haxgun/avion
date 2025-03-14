@@ -108,6 +108,9 @@
   "languageSwitcher": {
     "title": "Язык"
   },
+  "colorSelector": {
+    "title": "Выберите цвет"
+  },
   "app": {
     "header": {
       "greeting": {
