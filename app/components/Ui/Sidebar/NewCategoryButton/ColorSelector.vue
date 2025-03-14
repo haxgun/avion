@@ -37,11 +37,14 @@
         <div class="h-3 w-3 rounded-full bg-[var(--selected-color)]" />
         <ChevronDown :size="14" color="#27272B" />
         <div
-          class="absolute -left-7 top-0 h-10 w-10 rounded-full bg-[var(--selected-color)] opacity-50 blur-2xl transition-colors"
+          class="absolute -left-7 top-0 h-10 w-10 rounded-full bg-[var(--selected-color)] opacity-50 blur-xl transition-colors"
         />
       </button>
     </UiDropdownMenuTrigger>
-    <UiDropdownMenuContent align="start" class="flex max-w-72 flex-col gap-1 rounded-lg p-5">
+    <UiDropdownMenuContent
+      align="start"
+      class="flex max-w-72 flex-col gap-1 rounded-lg p-5 shadow-[0_2px_8px_rgba(0,0,0,0.04),0_30px_70px_rgba(0,0,0,0.05)] ring-1 ring-white/10"
+    >
       <span class="px-[6px] text-sm font-medium">Выберите цвет</span>
       <div class="box-border inline-flex flex-wrap">
         <div v-for="color in colors" @click="selectColor = color" :key="color" class="p-[6px]">

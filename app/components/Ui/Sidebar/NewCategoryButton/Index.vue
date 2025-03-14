@@ -16,7 +16,7 @@
       >
         <Plus :size="14" color="#27272B" />
       </div>
-      <span> Create new task </span>
+      <span> {{ $t("app.sidebar.create") }} </span>
     </div>
     <div v-else class="category-button justify-between">
       <div class="flex flex-row items-center gap-2">
