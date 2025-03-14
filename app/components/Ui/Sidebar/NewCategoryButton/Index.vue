@@ -17,14 +17,14 @@
       if (categoryInput.value) {
         categoryInput.value.focus();
       }
-    }, 100);
+    }, 200);
   };
 
   watch(ctrlD, (v) => {
     if (v) focusCategoryInput();
   });
 
-  const handleCategoryClickOutside = (event: Event) => {
+  const handleCategoryClickOutside = () => {
     if (!colorSelectorRef.value?.selectMenu) {
       showCreateCategory.value = false;
     }
@@ -48,8 +48,8 @@
     </div>
     <div
       v-else
-      class="category-button justify-between"
       v-on-click-outside="handleCategoryClickOutside"
+      class="category-button justify-between"
     >
       <div class="flex flex-row items-center gap-2">
         <UiSidebarNewCategoryButtonColorSelector ref="colorSelectorRef" />

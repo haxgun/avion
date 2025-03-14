@@ -37,7 +37,7 @@
 <template>
   <div class="relative">
     <button
-      class="color-select-trigger relative flex items-center justify-center gap-1 overflow-hidden rounded-[7px] bg-[#f2f4f7] p-[10px] transition-all hover:ring-0 focus:scale-95"
+      class="color-select-trigger relative flex items-center justify-center gap-1 overflow-hidden rounded-[7px] bg-[#f2f4f7] p-[10px] transition-all hover:ring-0 active:scale-95"
       @click="selectMenu = !selectMenu"
     >
       <div class="h-3 w-3 rounded-full bg-[var(--selected-color)]" />
