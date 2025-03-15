@@ -24,11 +24,11 @@
   };
 
   const menuitems = [
-    { title: "Настройки", icon: Settings01, shortcut: "⌘S" },
-    { title: "Обратная связь", icon: MessageSquare02, shortcut: "⌘T" },
-    { title: "Поддержка", icon: LifeBuoy01, shortcut: "⌘S" },
-    { title: "О нас", icon: InfoCircle, shortcut: "⌘K" },
-    { title: "Выйти", icon: LogOut02 },
+    { title: "app.usermenu.settings", icon: Settings01, shortcut: "⌘S" },
+    { title: "app.usermenu.feedback", icon: MessageSquare02, shortcut: "⌘T" },
+    { title: "app.usermenu.support", icon: LifeBuoy01, shortcut: "⌘S" },
+    { title: "app.usermenu.about", icon: InfoCircle, shortcut: "⌘K" },
+    { title: "app.usermenu.signout", icon: LogOut02 },
   ];
 </script>
 
@@ -74,21 +74,17 @@
             </div>
           </div>
           <UiDropdownMenuSeparator class="bg-black/5" />
-          <UiDropdownMenuItem
-            v-if="userData.staff"
-            class="p-2 text-sm"
-            title="Панель управления"
-            :icon="Tool02"
-            shortcut="⌘P"
-          />
+          <UiDropdownMenuItem v-if="userData.staff" class="p-2 text-sm">
+            <Tool02 class="h-4 w-4" />
+            <span>{{ $t("app.usermenu.admin") }}</span>
+            <UiKeyboardKey class="ml-auto" keys="⌘P" />
+          </UiDropdownMenuItem>
           <template v-for="(item, i) in menuitems" :key="i">
-            <UiDropdownMenuItem
-              v-if="item.title"
-              class="p-2 text-sm"
-              :title="item.title"
-              :icon="item.icon"
-              :shortcut="item.shortcut"
-            />
+            <UiDropdownMenuItem v-if="item.title" class="p-2 text-sm">
+              <component :is="item.icon" class="h-4 w-4" />
+              <span>{{ $t(item.title) }}</span>
+              <UiKeyboardKey class="ml-auto" :keys="item.shortcut" />
+            </UiDropdownMenuItem>
           </template>
         </div>
         <div

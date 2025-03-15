@@ -177,6 +177,14 @@
       "today": "Today",
       "create": "Create new list",
       "newList": "List name"
+    },
+    "usermenu": {
+      "admin": "Admin Panel",
+      "settings": "Settings",
+      "feedback": "Feedback",
+      "support": "Support",
+      "about": "About Us",
+      "signout": "Sign Out"
     }
   }
 }
