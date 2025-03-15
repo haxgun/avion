@@ -34,7 +34,7 @@
     <div
       v-else
       @click="toggleSidebar"
-      class="fixed left-7 top-7 flex items-center justify-center rounded-lg bg-[#e0e3e6] p-3"
+      class="fixed left-7 top-7 flex cursor-pointer items-center justify-center rounded-lg bg-[#e0e3e6] p-3"
     >
       <AlignRight01 :size="16" />
     </div>
