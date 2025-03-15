@@ -1,6 +1,6 @@
 <script setup lang="ts">
   defineProps<{
-    keys: [string, string];
+    keys: [string, string] | string;
   }>();
 </script>
 

@@ -2,14 +2,14 @@
   <DropdownMenuItem v-bind="forwarded" :class="styles({ inset, class: props.class })">
     <slot>
       <slot name="icon">
-        <Icon v-if="icon" :name="icon" class="h-4 w-4" />
+        <component :is="icon" v-if="icon" class="h-4 w-4" />
       </slot>
       <slot name="title">
         <span v-if="title">{{ title }}</span>
       </slot>
     </slot>
     <slot name="shortcut">
-      <UiDropdownMenuShortcut v-if="shortcut">{{ shortcut }}</UiDropdownMenuShortcut>
+      <UiKeyboardKey v-if="shortcut" class="ml-auto" :keys="shortcut" />
     </slot>
   </DropdownMenuItem>
 </template>

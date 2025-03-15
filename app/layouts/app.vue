@@ -9,6 +9,7 @@
   >
     <LazyUiHighlights />
     <UiSidebar />
+    <LazyUiSettings />
     <div class="relative mx-auto my-0 flex min-h-full w-full max-w-2xl flex-col">
       <slot />
     </div>
