@@ -12,6 +12,13 @@
     isOpen.value = !isOpen.value;
     sidebarState.value = isOpen.value;
   }
+
+  const keys = useMagicKeys();
+  const b = keys["B"];
+
+  watch(b, (v) => {
+    if (v) toggleSidebar();
+  });
 </script>
 
 <template>
@@ -33,8 +40,8 @@
     </div>
     <div
       v-else
-      @click="toggleSidebar"
       class="fixed left-7 top-7 flex cursor-pointer items-center justify-center rounded-lg bg-[#e0e3e6] p-3"
+      @click="toggleSidebar"
     >
       <AlignRight01 :size="16" />
     </div>
